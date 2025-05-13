@@ -1,0 +1,8 @@
+<mat-card *ngIf="temperature">
+  <h3>Current Temperature</h3>
+  <p><strong>Temp:</strong> {{ temperature.temperatureC | number: '1.1-1' }} °C</p>
+</mat-card>
+
+<mat-card *ngIf="!temperature">
+  <p>Select a station to view its temperature.</p>
+</mat-card>

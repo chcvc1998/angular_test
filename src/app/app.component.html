@@ -2,10 +2,18 @@
   <span class="header-text">Alaska Air - Angular Interview Exercise</span>
 </header>
 
-<div class="main">
-
+<div class="layout-container">
+  <div class="station-list-panel">
+    <app-weather-station-list (stationSelected)="onStationSelected($event)"></app-weather-station-list>
+  </div>
+  <div class="temperature-panel">
+    <app-temperature-display [stationId]="selectedStationId">
+    </app-temperature-display>
+  </div>
 </div>
 
 <footer class="footer">
   Original Repository: <a href="https://github.com/Alaska-ITS/angular-interview-exercise">angular-interview-exercise</a>
 </footer>
+
+
